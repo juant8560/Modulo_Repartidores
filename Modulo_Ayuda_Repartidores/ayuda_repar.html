@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+        <h2>Menú</h2>
+        <ul>
+            <li><a onclick="showSection('menu')">Acerca De Nosotros</a></li>
+            <li><a onclick="showSection('home')">Home </a></li>
+
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <footer>@Real_Market UNICAH 2024</footer>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="menu" class="active">
+            <h2>Real_Market 2024</h2>
+            <img src="imagenes_reparti/logo.jpg"  class="section-image">
+            <p>Real_Market es un programa software diseñado para optimizar la gestión de supermercados. Somos una empresa dedicada a ofrecer el mejor
+                servicio de compras que un supermercado puede tener. A través del programa como repartidor podrás ver las órdenes entregadas y las que siguen
+                pendientes.
+            </p>
+        </section>
+
+        <section id="home">
+            <h2>Pantalla Principal</h2>
+            <img src="imagenes_reparti/home.jpg"  class="section-image">
+            <ul>
+                <li><strong>Ordenes Pendientes.</strong> Haz click en la parte de arriba la opción que dice "Ordenes Pendientes", para poder visualizar los pedidos que no se han entregado
+                todavía.</li>
+                <li><strong>Ordenes Entregadas.</strong> Haz click en la parte de arriba la opción que dice "Ordenes Entregadas", para poder visualizar los pedidos que se han entregado
+                    ya.</li>
+            </ul>
+        </section>      
+
+    </main>
+    <script>
+        function showSection(sectionId) 
+        {
+            document.querySelectorAll('section').forEach(section => {section.classList.remove('active');});
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
